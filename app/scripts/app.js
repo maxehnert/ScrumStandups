@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('myApp', ['ngRoute'])
+  angular.module('myApp', ['ngRoute', 'ngCookies'])
     .constant('PARSE_HEADERS', {
       headers: {
         'X-Parse-Application-Id': 'ZckXCsyH38Gz4pRxv8Ch6BB6LV4J41tmnDNHhb8Q',

@@ -12,6 +12,10 @@
           UserFactory.login(user);
         };
 
+        $scope.checkUser = function () {
+          UserFactory.checkUser();
+        };
+
       }
     ]);
 
