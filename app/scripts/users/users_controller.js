@@ -12,9 +12,12 @@
           UserFactory.login(user);
         };
 
-        $scope.checkUser = function () {
-          UserFactory.checkUser();
+        $scope.logout = function () {
+          UserFactory.logout();
         };
+
+        // Check User on App Load
+        UserFactory.checkUser();
 
       }
     ]);
