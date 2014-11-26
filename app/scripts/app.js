@@ -27,6 +27,7 @@
       $rootScope.$on('$routeChangeStart', function (event) {
 
         UserFactory.checkUser();
+        $(document).foundation();
 
       });
     }])

@@ -1,1 +1,17 @@
-... stuff ...
+<select ng-model="cStudent"
+  ng-options="student.objectId as student.firstname + ' ' + student.lastname for student in students"
+><option value="">Choose...</option></select>
+
+<p>{{ cStudent }}</p>
+
+<br /><br />
+<a href="#" data-reveal-id="myModal">Add A Student</a>
+
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Add A Student</h2>
+  <form ng-submit="addStudent(student)" id="add-student-form">
+    <input type="text" ng-model="student.firstname" placeholder="First Name"/>
+    <input type="text" ng-model="student.lastname" placeholder="Last Name"/>
+    <button>Add</button>
+  </form>
+</div>
