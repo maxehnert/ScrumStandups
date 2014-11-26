@@ -1,15 +1,19 @@
 <!doctype html>
 <html class="no-js">
   <head>
+    <base href="/">
+
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
     <title>Scrum_Standups</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -25,6 +29,7 @@
 
     <div class="hero-unit">
       <span id="user"></span>
+      <small><a href="" log-out>Log Out</a></small>
       <h1>StandUps</h1>
       <div ng-view></div>
     </div>

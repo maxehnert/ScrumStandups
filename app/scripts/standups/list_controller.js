@@ -1,9 +1,12 @@
 (function () {
 
   angular.module('myApp')
-    .controller('List', [
-      function () {
+    .controller('List', ['UserFactory',
+      function (UserFactory) {
+
 
       }
     ]);
 }());
+
+
