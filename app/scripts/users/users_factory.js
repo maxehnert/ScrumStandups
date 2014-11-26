@@ -15,13 +15,13 @@
           $http.get('https://api.parse.com/1/login/?'+params, PARSE_HEADERS)
             .success( function (data) {
               $cookieStore.put('currentUser', data);
-              return ioUser();
+              return checkUser();
           });
         };
 
         var logout = function () {
           $cookieStore.remove('currentUser');
-          return ioUser();
+          return checkUser();
         };
 
         var checkUser = function (user) {
