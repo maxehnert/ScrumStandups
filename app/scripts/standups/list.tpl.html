@@ -1,24 +1,20 @@
 <select ng-model="cStudent"
   ng-options="student as student.firstname + ' ' + student.lastname for student in students"
 ><option value="">Choose...</option></select>
-<br /><br />
-<a href="#" data-reveal-id="stModal">Add A Student</a> |
-<a href="#" data-reveal-id="suModal">Add A StandUp</a>
 
-<div id="stModal" class="reveal-modal" data-reveal>
-  <h2>Add A Student</h2>
-  <form ng-submit="addStudent(student)" id="add-student-form">
-    <input type="text" ng-model="student.firstname" placeholder="First Name"/>
-    <input type="text" ng-model="student.lastname" placeholder="Last Name"/>
-    <button>Add</button>
-  </form>
-</div>
+  <ul>
+    <li ng-repeat="standup in studentStandups" id="{{ standup.objectId }}">{{ standup.currently }}</li>
+  </ul>
+
+<a href="#" data-reveal-id="suModal" ng-if="cStudent">Add A StandUp</a>
 
 <div id="suModal" class="reveal-modal" data-reveal>
   <h4>Add A StandUp for {{ cStudent.firstname }} {{ cStudent.lastname }}</h4>
+  <a class="close-reveal-modal">&#215;</a>
   <form ng-submit="addStandup(standup)" id="add-student-form">
-    <textarea ng-model="standup.one"></textarea>
-    <textarea ng-model="standup.two"></textarea>
+    <textarea ng-model="standup.currently" placeholder="Currently Working On"></textarea>
+    <textarea ng-model="standup.roadblock" placeholder="Roadblocks"></textarea>
+    <input type="text" ng-model="standup.student" id="csID" style="display: none;" />
     <button>Add</button>
   </form>
 </div>
